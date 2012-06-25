@@ -14,13 +14,13 @@ Rationale
 
 There are a number of problems currently in Python packaging.
 
-* Lack of a standard cross tool format for distributions.
+* Lack of a standard cross tool layout for distributions.
 * Multiple locations where the same meta-data is defined.
 * Ability to build all types of projects.
 
 
-Standard Formats for Distributions
-----------------------------------
+Standard Layout
+---------------
 
 Right now there are a number of competing standards for what is contained inside
 of a distribution archive. distutils and setuptools share an idiom of using a
@@ -31,8 +31,8 @@ the distutils/setuptools standard ``setup.py`` distutils2 and bento can bootstra
 themselves using code located inside of ``setup.py``.
 
 
-Multiple Locations for Meta-data
----------------------------------
+Meta-data
+---------
 
 Currently meta-data can be located in one of a minimum of two locations. ``PKG-INFO``
 and ``setup.py``. It can also be located inside of ``setup.cfg``, ``bento.info``,
@@ -40,8 +40,8 @@ and any other location that a packager might wish (again due to the executable
 nature of ``setup.py``).
 
 
-Custom Builds
--------------
+Custom Compilation
+------------------
 
 A number of projects have had to work around or monkeypatch distutils because
 of assumptions that distutils makes about how to compile a project were wrong.
