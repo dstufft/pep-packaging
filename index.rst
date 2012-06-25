@@ -216,6 +216,13 @@ Example::
     }
 
 
+platform
+''''''''
+
+A Platform specification describing an operating system supported by the
+distribution which is not listed in the "Operating System" Trove classifiers_.
+
+
 requires_python
 '''''''''''''''
 
