@@ -97,8 +97,11 @@ dist.json
 ``dist.json`` is a JSON file containing all the meta-data for this distribution.
 It must be a valid JSON file and cannot be a JavaScript object literal.
 
+Fields
+------
+
 name
-----
+''''
 
 The most important things in your dist.json are the name and version fields. The
 name and version together form an identifier that is assumed to be completely
@@ -108,7 +111,7 @@ The name is what your thing is called.
 
 
 version
--------
+'''''''
 
 The most important things in your dist.json are the name and version fields. The
 name and version together form an identifier that is assumed to be completely
@@ -118,13 +121,13 @@ The version must be in the format specified in PEP 386 [#pep386]_
 
 
 summary
--------
+'''''''
 
 A one-line summary of what the distribution does.
 
 
 description
------------
+'''''''''''
 
 A longer description of the distribution that can run to several paragraphs.
 Software that deals with metadata should not assume any maximum size for this
@@ -137,7 +140,7 @@ be conservative in the markup they use.
 
 
 keywords
---------
+''''''''
 
 A list of additional keywords to be used to assist searching for the distribution
 in a larger catalog. It should be a list of strings.
@@ -150,14 +153,14 @@ Example::
 
 
 author
-------
+''''''
 
 A string, dictionary representing the author of the distribution, see
 `People Fields`_ for more information.
 
 
 maintainer
-----------
+''''''''''
 
 A string or dictionary representing the current maintainer of the distribution,
 see `People Fields`_ for more information. This field *SHOULD* be omitted if it
@@ -165,14 +168,14 @@ is the same as the author.
 
 
 contributors
-------------
+''''''''''''
 
 A list of additional contributors for the distribution. Each item in the list
 must either be a string or a dictionary, see `People Fields`_ for more
 information.
 
 uris
-----
+''''
 
 A dictionary of Label: URI for this project. Each label is limited to 32 characters
 in length.
@@ -188,7 +191,7 @@ Example::
 
 
 license
--------
+'''''''
 
 Text indicating the license covering the distribution where the license is not
 a selection from the "License" Trove classifiers. See classifiers_ below. This
@@ -198,7 +201,7 @@ a license.
 
 
 classifiers
------------
+'''''''''''
 
 A List of strings where each item represents a distinct classifier for this
 distribution. Classifiers are described in PEP 301 [#pep301]_.
@@ -214,7 +217,7 @@ Example::
 
 
 requires_python
----------------
+'''''''''''''''
 
 This field specifies the Python version(s) that the distribution is guaranteed
 to be compatible with. Version numbers must be in the format specified in
