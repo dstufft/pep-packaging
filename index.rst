@@ -1,7 +1,7 @@
 Abstract
 ========
 
-The goal of this PEP is to provide a standard layout and format for Python
+The goal of this PEP is to provide a standard layout and meta-data for Python
 distributions, so that all tools creating and installing distributions are
 inter-operable.
 
