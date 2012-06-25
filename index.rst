@@ -163,7 +163,7 @@ maintainer
 ''''''''''
 
 A string or dictionary representing the current maintainer of the distribution,
-see `People Fields`_ for more information. This field *SHOULD* be omitted if it
+see `People Fields`_ for more information. This field **SHOULD** be omitted if it
 is the same as the author.
 
 
