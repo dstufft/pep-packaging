@@ -244,6 +244,39 @@ example::
     Monty Python <monty@python.org> (http://python.org/)
 
 
+Version Specifiers
+------------------
+
+Version specifiers are a series of conditional operators and version numbers,
+separated by commas. Conditional operators must be one of "<", ">", "<=", ">=",
+"==", "!=" and "~>".
+
+The "~>" is a special case which can be pronounced as "approximately greater
+than". When this is used it signifies that the the version should be greater
+than or equal to the specified version within the same release series. For
+example, if "~>2.5.2" is the specifier, then any version matching 2.5.x will
+be accepted where x is >= 2.
+
+Any number of conditional operators can be specified, e.g. the string
+">1.0, !=1.3.4, <2.0" is a legal version declaration. The comma (",") is
+equivalent to the **and** operator.
+
+Each version number must be in the format specified in PEP 386 [#pep386]_.
+
+Notice that some projects might omit the ".0" prefix for the first release of
+the "2.5.x" series:
+
+* 2.5
+* 2.5.1
+* 2.5.2
+* etc.
+
+In that case, "2.5.0" will have to be explicitly used to avoid any confusion
+between the "2.5" notation that represents the full range. It is a recommended
+practice to use schemes of the same length for a series to completely avoid this
+problem.
+
+
 References
 ==========
 
