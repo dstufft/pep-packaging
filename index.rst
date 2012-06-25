@@ -19,8 +19,8 @@ There are a number of problems currently in Python packaging.
 * Ability to build all types of projects.
 
 
-Standard Format for Distributions
----------------------------------
+Standard Formats for Distributions
+----------------------------------
 
 Right now there are a number of competing standards for what is contained inside
 of a distribution archive. distutils and setuptools share an idiom of using a
@@ -50,6 +50,45 @@ projects with complex compiler dependencies such as Numpy [#numpy]_.
 
 Further more there have been serious doubts raised by some that any generic
 compilation step would be able to cover all needs [#generic1]_ [#generic2]_.
+
+
+What this PEP proposes
+----------------------
+
+* A new defined layout that any tool may create or consume
+* A singular location to be used as the "one true source" for all meta-data
+* New meta-data version to deal with new requirements.
+
+Standard Layout
+===============
+
+All Python distributions are gzip archived containing a ``dist.json`` file
+as well as any source or binary files that should be included as part of the
+distribution.
+
+Source Distribution
+-------------------
+
+A source distribution is defined as a distribution that does not include any
+sort of precompiled files. A source distribution **MUST** contain a ``dist.json``
+and all source files, Python or otherwise, that this distribution contains.
+
+
+Binary Distribution
+-------------------
+
+A binary distribution is defined as package that does not require any sort of
+compilation step to complete. A binary distribution **MUST** contain a ``dist.json``
+as well as one or more directories containing a compiled distribution.
+
+
+Build Directories
+'''''''''''''''''
+
+Build directories are specially named directories that signify which Platform
+and Python that particular build is for.
+
+TODO: Specify the proper naming convention for build directories.
 
 
 References
